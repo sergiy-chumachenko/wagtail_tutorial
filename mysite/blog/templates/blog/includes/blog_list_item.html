@@ -1,0 +1,15 @@
+{% load static wagtailcore_tags wagtailimages_tags %}
+
+<div class="row media-object">
+    {% if blog.main_image %}
+        <div class="media-object-section">
+        {% image blog.main_image fill-200x200 as img %}
+            <a href="{% pageurl blog %}"><img class="image_tmb" src="{{ img.url }}" /></a>
+        </div>
+    {% endif %}
+        <div class="media-object-section">
+            <p class="data"><strong>{{ blog.date }}</strong></p>
+            <a href="{% pageurl blog %}"><span>{{ blog.title }}</span></a>
+            <p>{{ blog.intro }}</p>
+        </div>
+ </div>
