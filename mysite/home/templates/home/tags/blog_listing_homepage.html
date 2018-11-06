@@ -1,0 +1,5 @@
+{% if blogs %}
+      {% for blog in blogs %}
+        {% include "blog/includes/blog_list_item.html" %}
+      {% endfor %}
+{% endif %}

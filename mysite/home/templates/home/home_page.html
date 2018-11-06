@@ -1,9 +1,14 @@
 {% extends "base.html" %}
 
 {% load wagtailcore_tags %}
+{% load home_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
+    {% blog_listing_homepage %}
     {{ page.body|richtext }}
+    {{ page.disc_t|richtext }}
+    {% include "home/includes/slider.html" %}
+
 {% endblock %}

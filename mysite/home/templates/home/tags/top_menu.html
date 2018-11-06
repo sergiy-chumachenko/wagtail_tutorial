@@ -1,0 +1,13 @@
+{% load home_tags wagtailcore_tags %}
+{% get_site_root as site_root %}
+<li class="nav-item"><a href="{% pageurl site_root %}" class="menu_link_main" title="{{ site_root.title }}">Main</a></li>
+{% for menuitem in menuitems %}
+    <li class="nav-item">
+        {% if menuitem.show_dropdown %}
+        <a data-toggle="dropdown" class="menu_link_item" href="#">{{ menuitem.title }}</a>
+        {% top_menu_children parent=menuitem %}
+        {% else %}
+        <a href="{% pageurl menuitem %}">{{ menuitem.title }}</a>
+        {% endif %}
+    </li>
+{% endfor %}

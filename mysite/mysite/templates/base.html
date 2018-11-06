@@ -1,4 +1,5 @@
 {% load static wagtailuserbar %}
+{% load home_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,6 +39,10 @@
           <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
         </nav>
+        {% block menu %}
+            {% get_site_root as site_root %}
+            {% top_menu parent=site_root calling_page=self %}
+        {% endblock %}
         	{% wagtailuserbar %}
             <div class="container">
                 {% block content %}

@@ -1,0 +1,14 @@
+{% load wagtailimages_tags wagtailembeds_tags %}
+
+{% if slider_items %}
+<div class="slider" id="homeSlider">
+    <ul class="slides">
+        {% for slider_item in slider_items %}
+      <li>
+          {% image slider_item.image width-1200 as imageslider %}
+            <img src="{{ imageslider.url }}" class='home_slider' alt="{{ imageslider.alt }}" />
+      </li>
+        {% endfor %}
+    </ul>
+  </div>
+{% endif %}
