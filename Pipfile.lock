@@ -167,7 +167,7 @@
                 "sha256:aa9daf174ed83dc9d805fc958b7d34f6cfe840d053e929af105d9f7d154938dc"
             ],
             "index": "pypi",
-            "version": "==2.3"
+            "version": "==2.7.2"
         },
         "webencodings": {
             "hashes": [
