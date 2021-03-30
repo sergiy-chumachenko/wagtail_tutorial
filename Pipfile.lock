@@ -69,7 +69,7 @@
                 "sha256:607865b0bb1598b153793892101d881466bd5a991de12bd6229abb18b1c86136",
                 "sha256:63f76cbe1e7d12b94c357d7e54401103b2e52aef0f7c1650d6c820ad708776e5"
             ],
-            "version": "==3.9.1"
+            "version": "==3.11.2"
         },
         "draftjs-exporter": {
             "hashes": [
